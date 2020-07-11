@@ -42,12 +42,16 @@ Prefix: $("http")
 ```javascript
 $("http").get("example.com", res => {
   // Do something
+  // Success request
 })
-.done(() => {
-  // second success call
+.success(() => {
+  // second success 
 })
 .fail(() => {
   // Fail request
+})
+.done(() => {
+  // Request is done/complete
 });
 ```
 `With auto json parse if response is json`
