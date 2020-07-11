@@ -26,13 +26,22 @@ $(".box")
 Notice:
 
 Replace = rep 
-`// $("#id").repClass("class1", "class2");`
+```javascript
+$("#id").repClass("class1", "class2");
+$("#id").repAttr("src", "href");
+```
 
 Remove = rem 
-`// $("#id").remClass("className");`
+```javascript
+$("#id").remClass("className");
+$("#id").remAttr("disabled");
+```
 
 Toggle = tog 
-`// $("#id").togClass("class1", "class2");`
+```javascript
+$("#id").togClass("class1", "class2");
+$("#id").togAttr("disabled");
+```
 
 [ HTTP ] ex.
 
