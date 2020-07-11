@@ -28,7 +28,6 @@ Notice:
 Replace = rep 
 ```javascript
 $("#id").repClass("class1", "class2");
-$("#id").repAttr("src", "href");
 ```
 
 Remove = rem 
