@@ -1,4 +1,4 @@
-var $ = function(el) {
+const $ = function(el) {
   
   let res;
   
@@ -19,9 +19,15 @@ var $ = function(el) {
     attr: function(atr, value) {
       return value ? this[0].setAttribute(atr, value) : this[0].getAttribute(atr);
     },
+    hasAttr: function(atr) {
+       return this[0].hasAttribute(atr);
+    },
     remAttr: function(atr) {
       this[0].removeAttribute(atr);
       return dom;
+    },
+    togAttr: function(atr) {
+      return this[0].toggleAttribute(atr);
     },
     title: function(newTitle) {
       return newTitle ? this[0].title = newTitle : this[0].title;
