@@ -26,9 +26,12 @@ $(".box")
 ```
 Notice:
 
->Replace = rep // $("#id").repClass("class1", "class2");
->Remove = rem // $("#id").remClass("className");
->Toggle = tog // $("#id").togClass("class1", "class2");
+Replace = rep 
+// $("#id").repClass("class1", "class2");
+Remove = rem 
+// $("#id").remClass("className");
+Toggle = tog 
+// $("#id").togClass("class1", "class2");
 
 [ HTTP ] ex.
 
