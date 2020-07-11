@@ -50,7 +50,7 @@ $("http").get("example.com", res => {
   // Fail request
 });
 ```
-**With auto json parse if response is json**
+`With auto json parse if response is json`
 
 ------
 No hate pls just love :D
