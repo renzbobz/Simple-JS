@@ -27,11 +27,11 @@ $(".box")
 Notice:
 
 Replace = rep 
-// $("#id").repClass("class1", "class2");
+`$("#id").repClass("class1", "class2");`
 Remove = rem 
-// $("#id").remClass("className");
+`$("#id").remClass("className");`
 Toggle = tog 
-// $("#id").togClass("class1", "class2");
+`$("#id").togClass("class1", "class2");`
 
 [ HTTP ] ex.
 
