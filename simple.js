@@ -178,7 +178,7 @@ var $ = function(el) {
         callback(xhr.statusCode, res);
         return httpHandler(xhr, res);
       },
-      error: function(callback) {
+      fail: function(callback) {
         if (xhr.statusCode < 300) return;
         callback(xhr.statusCode, res);
         return httpHandler(xhr, res);
