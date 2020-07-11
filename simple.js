@@ -172,20 +172,21 @@ var $ = function(el) {
   
   
   function httpHandler(xhr, res) {
+    const status = xhr.statusText;
     return {
       success: function(callback) {
         if (xhr.statusCode >= 300) return;
-        callback(xhr.statusCode, res);
+        callback(res, status, xhr);
         return httpHandler(xhr, res);
       },
       fail: function(callback) {
-        if (xhr.statusCode < 300) return;
-        callback(xhr.statusCode, res);
+        if (xhr.status < 300 || xhr.status >= 500) return;
+        callback(xhr, status, res);
         return httpHandler(xhr, res);
       },
-      done: function(callback) {
-        if (xhr.DONE != 4) return false;
-        callback(res);
+      complete: function(callback) {
+        if (xhr.readyState != 4) return;
+        callback(res, status, xhr);
         return httpHandler(xhr, res);
       }
     };
@@ -210,11 +211,11 @@ var $ = function(el) {
       const xhr = new XMLHttpRequest();
       let res;
       xhr.open("GET", url, true);
-      xhr.send();
       xhr.onreadystatechange = _ => {
         res = this.jsonDecode(xhr.response);
-        if (callback) callback(xhr, xhr.status, res);
+        if (callback) callback(res, xhr.statusText, xhr);
       }
+      xhr.send();
       return httpHandler(xhr, res);
     },
     
@@ -223,14 +224,14 @@ var $ = function(el) {
       const xhr = new XMLHttpRequest();
       let res;   
       xhr.open("POST", url, true);
-      xhr.send(data);
       xhr.onreadystatechange = _ => {
         res = this.jsonDecode(xhr.response);
-        if (callback) callback(xhr, xhr.status, res);
+        if (callback) callback(res, xhr.statusText, xhr);
       }
+      xhr.send(data);
       return httpHandler(xhr, res);     
     }
-    /* NOT FINISH
+    /*
     fileUpload: function(url, data, callback) {
       const xhr = new XMLHttpRequest();
       let res, percent;
@@ -246,8 +247,7 @@ var $ = function(el) {
       res = this.jsonDecode(xhr.response);
       if (callback) callback(xhr, xhr.status, res, percent);
       return httpHandler(xhr, res);
-    }
-    */
+    }*/
   }
   
   
