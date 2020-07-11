@@ -50,7 +50,7 @@ $("http").get("example.com", res => {
 .fail(() => {
   // Fail request
 })
-.done(() => {
+.complete(() => {
   // Request is done/complete
 });
 ```
