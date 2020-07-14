@@ -64,8 +64,6 @@ $("http").get("example.com", res => {
 `With auto json parse if response is json`
 
 ------
-No hate pls just love :D
-
-I'm just a student so if you have any suggestions/tips please share it.
+If you have any suggestions/tips please share it.
 
 >Coded on mobile phone.
