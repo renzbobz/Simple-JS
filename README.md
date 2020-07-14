@@ -3,7 +3,7 @@ Simple JavaScript library
 
 This is just a challenge for myself to create a library like jquery without looking into jquery source code and this is what i made so far :)
 -----
-To use it's like jQuery :D
+To use it's like jQuery
 
 Prefix: $
 
@@ -66,4 +66,4 @@ $("http").get("example.com", res => {
 ------
 If you have any suggestions/tips please share it.
 
->Coded on mobile phone.
+>Coded on mobile phone
