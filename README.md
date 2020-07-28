@@ -49,13 +49,13 @@ $().get("example.com", res => {
   // Do something
   // Success request
 })
-.success(() => {
+.success((res, status, xhr) => {
   // second success 
 })
-.fail(() => {
+.fail((xhr, status, err) => {
   // Fail request
 })
-.complete(() => {
+.complete(_ => {
   // Request is done/complete
 });
 ```
