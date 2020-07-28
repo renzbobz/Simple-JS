@@ -44,10 +44,8 @@ $("#id").togAttr("disabled");
 
 [ HTTP ] ex.
 
-
-Prefix: $("http")
 ```javascript
-$("http").get("example.com", res => {
+$().get("example.com", res => {
   // Do something
   // Success request
 })
@@ -64,6 +62,5 @@ $("http").get("example.com", res => {
 `With auto json parse if response is json`
 
 ------
-If you have any suggestions/tips please share it.
 
 >Coded on mobile phone
